@@ -1,0 +1,23 @@
+train_rounds: 400
+early_stop_rounds: 30
+verbose_eval: 0
+hparams:
+    booster: gbtree
+    objective: reg:linear
+    tree_method: gpu_hist  # auto, hist
+    grow_policy: lossguide  # lossguide, depthwise
+    eval_metric: ['rmse', 'mae']
+    nthread: -1
+    eta: 0.009
+    max_depth: 8
+    max_leaves: 0
+    min_child_weight: 1.0
+    colsample_bytree: 1.0
+    colsample_bylevel: 1.0
+    colsample_bynode: 1.0
+    subsample: 1.0
+    lambda: 0
+    alpha: 0
+    gamma: 0.0
+    verbosity: 0
+    silent: True
